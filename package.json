@@ -4,7 +4,7 @@
   "description": "A feedback project for NexaScale community. It is capstone project for NexaScale Cloud mentorship program. This repository contains the backend code.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js"
   },
   "keywords": [],
   "author": "",
