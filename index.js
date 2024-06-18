@@ -18,7 +18,7 @@ app.post("/api/submit", async (req, res) => {
     await container.items.create(complaint);
 
     // Trigger email notification
-    await axios.post("https://nexahub.azurewebsites.net/api/nexaHubEmail?code=UiX31xGJWcMOkqcnUxjgB8_8vFZBaeNlbphnPSpRxOIeAzFubQ5J6Q%3D%3D", complaint);
+    await axios.post(process.env.AZURE_FUNCTION, complaint);
     res.status(200).json({ message: "Complaint submitted successfully" });
   } catch (error) {
     res.status(500).json({ error: "Failed to submit complaint" });
